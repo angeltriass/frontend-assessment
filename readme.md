@@ -2,9 +2,7 @@ Frontend Web Developer Assessment
 ---
 Hi! 
 
-This is part of an assessment for a front-end web developer position.
-
-Thank you for the opportunity to complete this assessment. I look forward to your feedback.
+This is a simple website implementation as part of an assessment for a front-end web developer position.
 
 ##### Installation
 
@@ -22,7 +20,7 @@ npm install
 
 npm run dev
 
-- check for the local and open it to your browser
+- check for the local and open it in your browser
 
 ex. Local:   http://localhost:5173/
 

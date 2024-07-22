@@ -1,0 +1,303 @@
+Project Code Transcript
+
+Directory Structure:
+
+├── .gitignore
+├── index.html
+├── postcss.config.js
+├── public
+│   ├── data.json
+│   └── images
+│       ├── 1920x650.png
+│       ├── 400x300.png
+│       ├── 600x600.png
+│       └── hello-world.png
+├── readme.md
+├── src
+│   ├── index.scss
+│   └── main.js
+└── tailwind.config.js
+
+File Contents:
+
+
+--- File: index.html ---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/images/hello-world.png">
+  <title>Front-end Assessment</title>
+</head>
+<body class="antialiased">
+    <section class="relative md:bg-hero-lg bg-hero-sm bg-center bg-auto md:h-136 h-96 w-full overflow-hidden after:bg-black after:bg-opacity-30 after:absolute after:top-0 after:bottom-0 after:w-full">
+        <div class="banner-text text-center absolute top-1/2 left-2/4 -translate-x-1/2 -translate-y-1/2 w-full z-10 p-4">
+            <h1 class="lg:text-7xl md:text-6xl text-5xl font-bold text-white mb-6 w-full">Hello Developer!</h1>
+            <h2 class="lg:text-4xl md:text-3xl text-2xl text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+        </div>
+    </section>
+    <section class="column">
+        <div class="container mx-auto px-4 py-8 max-w-7xl">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 content-center">
+                <div class="flex flex-wrap justify-between items-center flex-col p-5 rounded-lg border-solid border-gray-200 border md:shadow transition duration-150 hover:shadow-xl">
+                    <div class="column__info">
+                        <img src="/images/400x300.png" alt="" class="m-auto rounded-md">
+                        <p class="text-center md:text-xl text-lg my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="column__button my-3">
+                        <a href="#" class="uppercase text-sm tracking-widest my-3.5 font-bold p-2 px-5 rounded-full border-solid border-black border-4 transition duration-500 hover:bg-black hover:text-white">Read More</a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-between items-center flex-col p-5 rounded-lg border-solid border-gray-200 border md:shadow transition duration-150 hover:shadow-xl">
+                    <div class="column__info">
+                        <img src="/images/400x300.png" alt="" class="m-auto rounded-md">
+                        <p class="text-center md:text-xl text-lg py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="column__button my-3">
+                        <a href="#" class="uppercase text-sm tracking-widest my-3.5 font-bold p-2 px-5 rounded-full border-solid border-black border-4 transition duration-500 hover:bg-black hover:text-white">Read More</a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-between items-center flex-col p-5 rounded-lg border-solid border-gray-200 border md:shadow transition duration-150 hover:shadow-xl">
+                    <div class="column__info">
+                        <img src="/images/400x300.png" alt="" class="m-auto rounded-md">
+                        <p class="text-center md:text-xl text-lg py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                    <div class="column__button my-3">
+                        <a href="#" class="uppercase text-sm tracking-widest my-3.5 font-bold p-2 px-5 rounded-full border-solid border-black border-4 transition duration-500 hover:bg-black hover:text-white">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tab-wrap px-4 my-6">
+        <div id="content-container" class="container mx-auto max-w-7xl bg-white shadow-md rounded-lg overflow-hidden"> </div>
+    </section>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+--- File: postcss.config.js ---
+
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+
+
+--- File: public/data.json ---
+
+[
+	{
+		"title": "Section 1",
+		"content": "<p>Maecenas nec semper ante, pellentesque posuere lorem. Nullam ipsum massa, consequat eget urna ut, pulvinar dignissim lorem. Nulla facilisi. Nam mattis eleifend metus. Fusce at commodo lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus pellentesque elit sem, vel blandit posuere.</p>"
+	},
+	{
+		"title": "Section 2",
+		"content": "<p>Mauris a orci sodales, scelerisque velit vitae, gravida nisl. Ut non laoreet eros, vel laoreet nisi. Praesent sed dolor dui. Proin non fringilla quam. Aliquam erat volutpat. Vestibulum vel arcu semper, lobortis turpis ac, ultricies nisi. Praesent id.</p>"
+	},
+	{
+		"title": "Section 3",
+		"content": "<p>Sed elementum sapien ut sapien imperdiet, eu venenatis enim rhoncus. Praesent euismod tincidunt rhoncus. Duis cras amet:</p><ul><li>List item one</li><li>List item two</li><li>List item three</li></ul>"
+	},
+	{
+		"title": "Section 4",
+		"content": "<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.</p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>"
+	}
+]
+
+
+--- File: src/main.js ---
+
+import './index.scss'
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetchData();
+});
+
+async function fetchData() {
+  try {
+    const response = await fetch('data.json');
+    const data = await response.json();
+    renderContent(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+function renderContent(data) {
+  const container = document.getElementById('content-container');
+  const isMobile = window.innerWidth < 768;
+
+  if (isMobile) {
+    renderAccordion(container, data);
+  } else {
+    renderTabs(container, data);
+  }
+}
+
+function renderTabs(container, data) {
+  const tabList = document.createElement('ul');
+  tabList.className = 'flex border-b';
+
+  const tabContent = document.createElement('div');
+  tabContent.className = 'p-6';
+
+  data.forEach((item, index) => {
+    const tabItem = createTabItem(item, index);
+    tabList.appendChild(tabItem);
+
+    const contentItem = createContentItem(item, index);
+    tabContent.appendChild(contentItem);
+  });
+
+  container.appendChild(tabList);
+  container.appendChild(tabContent);
+
+  // Open first tab by default
+  openTab(0);
+}
+
+function createTabItem(item, index) {
+  const li = document.createElement('li');
+  li.className = 'mr-2';
+
+  const button = document.createElement('button');
+  button.className = 'tab-button';
+  button.textContent = item.title;
+  button.addEventListener('click', () => openTab(index));
+
+  li.appendChild(button);
+  return li;
+}
+
+function createContentItem(item, index) {
+  const div = document.createElement('div');
+  div.className = 'tab-pane hidden';
+  div.setAttribute('data-tab-index', index);
+  div.innerHTML = item.content;
+  return div;
+}
+
+function openTab(index) {
+  const tabs = document.querySelectorAll('.tab-button');
+  const panes = document.querySelectorAll('.tab-pane');
+
+  tabs.forEach((tab, i) => {
+    if (i === index) {
+      tab.classList.add('active');
+    } else {
+      tab.classList.remove('active');
+    }
+  });
+
+  panes.forEach((pane, i) => {
+    if (i === index) {
+      pane.classList.remove('hidden');
+    } else {
+      pane.classList.add('hidden');
+    }
+  });
+}
+
+function renderAccordion(container, data) {
+  const accordion = document.createElement('div');
+  accordion.className = 'divide-y divide-gray-200';
+
+  data.forEach((item, index) => {
+    const accordionItem = createAccordionItem(item, index);
+    accordion.appendChild(accordionItem);
+  });
+
+  container.appendChild(accordion);
+
+  // Open first accordion item by default
+  toggleAccordionItem(0);
+}
+
+function createAccordionItem(item, index) {
+  const div = document.createElement('div');
+  div.className = 'border-b';
+
+  const button = document.createElement('button');
+  button.className = 'accordion-button';
+  button.innerHTML = `
+        ${item.title}
+        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    `;
+  button.addEventListener('click', () => toggleAccordionItem(index));
+
+  const content = document.createElement('div');
+  content.className = 'accordion-content max-h-0';
+  const innerContent = document.createElement('div');
+  innerContent.className = 'p-6';
+  innerContent.innerHTML = item.content;
+  content.appendChild(innerContent);
+
+  div.appendChild(button);
+  div.appendChild(content);
+  return div;
+}
+
+function toggleAccordionItem(index) {
+  const items = document.querySelectorAll('.accordion-button');
+  const contents = document.querySelectorAll('.accordion-content');
+
+  items.forEach((item, i) => {
+    const content = contents[i];
+    const svg = item.querySelector('svg');
+
+    if (i === index) {
+      item.classList.toggle('active');
+      svg.classList.toggle('rotate-180');
+
+      if (item.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = '0px';
+      }
+    } else {
+      item.classList.remove('active');
+      svg.classList.remove('rotate-180');
+      content.style.maxHeight = '0px';
+    }
+  });
+}
+
+window.addEventListener('resize', () => {
+  const container = document.getElementById('content-container');
+  container.innerHTML = '';
+  fetchData();
+});
+
+
+--- File: tailwind.config.js ---
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    
+    extend: {
+      colors: {
+        'custom-red': '#ff2c2c',
+      },
+      backgroundImage: {
+        'hero-lg': "url('/images/1920x650.png')",
+        'hero-sm': "url('/images/600x600.png')",
+      },
+      height: {
+        '136': '40rem',
+      },
+    },
+  },
+  plugins: [],
+}

@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .tab-wrap{
+        .tab-button {
+            @apply py-3 px-6 text-xl text-gray-600 hover:text-gray-800 focus:outline-none transition-colors duration-300 ease-in-out;
+            &.active{
+                @apply border-b-4 text-xl border-custom-red text-custom-red font-semibold;
+            }
+        }
+        .accordion-button {
+            @apply w-full text-left py-4 px-6 text-xl text-gray-700 hover:bg-gray-50 focus:outline-none transition-all duration-300 ease-in-out flex justify-between items-center;
+            &.active{
+                @apply bg-gray-50 text-xl text-custom-red font-semibold;
+            }
+        }
+        .accordion-content {
+            @apply overflow-hidden transition-all duration-300 ease-in-out;
+        }
+        p{
+            @apply md:text-xl text-lg my-3;
+        }
+        .tab-pane,
+        .accordion-content{
+            ul{
+                li{
+                    @apply md:text-xl text-lg list-disc ml-5 leading-8;
+                    &::marker{
+                        @apply text-custom-red;
+                    }
+                }
+            }
+        }
+    }
+}
